@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnvironmentSave</title>
+    <link rel="icon" type="image/png" href="pic 4.jpeg">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-transform: capitalize;
+        }
+        .SEC1 {
+            text-align: center;
+            color: #fff;
+            margin: 0;
+        }
+        .secdiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('pic1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 600px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            justify-content: space-between;
+        }
+        header h1 {
+            margin: 0;
+            font-size: medium;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-grow: 1;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+        }
+        .button {
+            border-radius: 10px;
+            background-color: #ee3d10;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            height: 100px;
+            border-radius: 100%;
+            width: 100px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        section h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .contribute-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .contribute-container button {
+            margin-left: 10px;
+        }
+        #line1 {
+            width: 50px;
+        }
+        section h1 {
+            font-size: 50px;
+        }
+        main {
+            padding: 0;
+        }
+        section h3 {
+            font-size: 30px;
+            margin: 0;
+        }
+        #Button1 {
+            border-radius: 30px;
+            background-color: #fb2056;
+            height: 48px;
+            width: 173px;
+            color: white;
+            font-size: 14px;
+            font-weight: bolder;
+            border-color: #fb2056;
+            text-transform: uppercase;
+        }
+        section h2 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 34px;
+        }
+        #line2 {
+            width: 100px;
+            color: #ee3d10;
+        }
+        .paras {
+            padding-left: 20px;
+            text-align: center;
+        }
+        .Sec2 {
+            background: url('pic4.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: auto;
+            color: #ebdddd;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .Sec2 h2 {
+          
+            padding-top: 40px;
+        }
+        .Sec2 h4 {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            font-size: larger;
+          
+        }
+        #h4 {
+            color: burlywood;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 4px 0;
+        }
+        #about-us {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+#about-us h2 {
+    font-size: 34px;
+    margin-top: 40px;
+}
+
+#about-us .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+#key-issues {
+    padding: 20px;
+    background-color: #e8f4f8;
+    color: #000000;
+    background: url(pic2.jpg)no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#key-issues h2 {
+    font-size: 34px;
+    margin-top: 40px;
+    text-align: center;
+   
+}
+
+#key-issues .issues-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#key-issues .issue {
+    margin-bottom: 20px;
+}
+
+#key-issues .issue h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#key-issues .issue p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+#sustainable-living {
+    padding: 20px;
+    background-color: #f0f8ff;
+    color: #000000;
+    background: url(pic5.jpg)no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+#sustainable-living h2 {
+    font-size: 34px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#sustainable-living .sustainable-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#sustainable-living .tip {
+    margin-bottom: 20px;
+}
+
+#sustainable-living .tip h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#sustainable-living .tip p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+#projects-initiatives {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #ffffff;
+    background: url(pic6.jpg)no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#projects-initiatives h2 {
+    font-size: 34px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#projects-initiatives .projects-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#projects-initiatives .project {
+    margin-bottom: 20px;
+}
+
+#projects-initiatives .project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#projects-initiatives .project p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#call-to-action {
+    padding: 20px;
+    background-color: #e0f7fa;
+    color: #000000;
+    text-align: center;
+    background: url(pic7.jpg)no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#call-to-action h2 {
+    font-size: 34px;
+    margin-top: 40px;
+}
+
+#call-to-action .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#call-to-action .cta {
+    margin-bottom: 20px;
+}
+
+#call-to-action .cta h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#call-to-action .cta p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#call-to-action .cta-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#call-to-action .cta-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#call-to-action .cta-buttons button:hover {
+    background-color: #004d40;
+}
+#resources-links {
+    padding: 20px;
+    background-color: #f1f8e9;
+    color: #ffffff;
+    background: url(pic8.jpg)no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#resources-links h2 {
+    font-size: 34px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#resources-links .resources-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#resources-links .resource-category {
+    margin-bottom: 20px;
+}
+
+#resources-links .resource-category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#resources-links .resource-category p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#resources-links .resource-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources-links .resource-category ul li {
+    margin-bottom: 5px;
+}
+
+#resources-links .resource-category ul li a {
+    text-decoration: none;
+    color: #00796b;
+    transition: color 0.3s;
+}
+
+#resources-links .resource-category ul li a:hover {
+    color: #004d40;
+}
+footer {
+    background-color: #263238;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul, .footer-section form {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #4caf50;
+}
+
+.footer-section .socials a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.footer-section .socials a:hover {
+    color: #4caf50;
+}
+
+.footer-section form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-section button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-section button:hover {
+    background-color: #388e3c;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1b1b1b;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            nav ul {
+                flex-direction: column;
+                display: none; /* Hide menu by default */
+            }
+            nav ul.show {
+                display: flex; /* Show menu when .show class is added */
+            }
+            nav ul li {
+                margin: 5px 0;
+                text-align: center;
+            }
+            .search-container {
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+            input[type="text"] {
+                flex-grow: 1;
+            }
+            main {
+                padding: 10px;
+            }
+            section h1 {
+                font-size: 20px;
+            }
+            section p {
+                font-size: 14px;
+            }
+            .contribute-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contribute-container button {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+            header h1 {
+                font-size: small;
+                margin-bottom: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .search-container {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+            input[type="text"] {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            button {
+                width: 100%;
+            }
+            section h1 {
+                font-size: 18px;
+            }
+            section p {
+                font-size: 12px;
+            }
+            .contribute-container {
+                width: 100%;
+                align-items: flex-start;
+            }
+            .contribute-container button {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EnvironmentSave</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <a href="#projects-initiatives"><li>Projects & Initiatives</li></a>
+
+                <li><a href="#">Services</a></li>
+                <a href="#call-to-action"><li>Get Involved</li></a>
+                <a href="#resources-links"><li>Resources & Links</li></a>
+
+                <a href="#about-us"><li>About Us</li></a>
+
+            </ul>
+            <div class="search-container">
+                
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="SEC1">
+            <div class="secdiv">
+                <h3>Learn How to save Environment</h3>
+                <hr id="line1">
+                <h1>Nature</h1>
+                <button id="Button1">Know more</button>
+            </div>
+        </section>
+        <section class="Sec2">
+            <h2>Purpose of our organisation</h2>
+            <hr id="line2">
+            <div class="paras">
+                <p><b>Welcome to EnvironmentSave.IO, your gateway to understanding and contributing to the protection of our planet. <br>In an era where environmental challenges are more pressing than ever, our mission is to inform, inspire, and empower individuals and communities to take meaningful actions towards sustainability.</b></p>
+            </div>
+            <div>
+                <p>
+                    <div id="h4"><h4> Overview of Environmental Issues:<br></h4></div>
+                    The world is facing a multitude of environmental issues that threaten our ecosystems, health, and future. Among the most critical challenges are:<br>
+                    <p id="indicator">(i)Climate Change: The warming of our planet due to increased greenhouse gas emissions is causing severe weather patterns, rising sea levels, and disruptions to biodiversity.<br></p>
+                    <p id="indicator">(ii)Deforestation: The large-scale removal of forests, primarily for agriculture and urban development, is leading to habitat loss, decreased biodiversity, and contributing to climate change.<br></p>
+                    <p id="indicator">(iii)Pollution: Air, water, and soil pollution from industrial activities, waste disposal, and chemicals are harming wildlife and human health.<br></p>
+                    <p id="indicator">(iv)Wildlife Conservation: Many species are at risk of extinction due to habitat destruction, poaching, and environmental changes, necessitating urgent conservation efforts.<br></p>
+                    <p id="indicator">(v)Renewable Energy: The transition to renewable energy sources like solar, wind, and hydro power is crucial for reducing our reliance on fossil fuels and mitigating climate change.<br></p>
+                    <p id="indicator">(vi)At [Environmetsave.IO], we delve into these issues, providing clear and actionable information to help you make a positive impact. Whether you're looking to reduce your carbon footprint, learn about sustainable practices, or get involved in conservation efforts, our resources are here to guide you every step of the way.</p>
+                </p>
+            </div>
+        </section>
+        <hr>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <hr id="line2">
+            <div class="about-content">
+                <p>
+                    Welcome to EnvironmentSave.IO! We are a dedicated team of environmental enthusiasts, scientists, and activists committed to protecting our planet and promoting sustainable practices. Our mission is to inform, inspire, and empower individuals and communities to take meaningful actions towards a healthier and more sustainable world.
+                </p>
+                <p>
+                    Our journey began with a shared passion for the environment and a desire to make a positive impact. We believe that every small step counts and that collective efforts can lead to significant change. Through our platform, we aim to raise awareness about critical environmental issues, provide actionable tips and resources, and foster a community of like-minded individuals who are dedicated to making a difference.
+                </p>
+                <p>
+                    At EnvironmentSave.IO, we cover a wide range of topics, including climate change, deforestation, pollution, wildlife conservation, and renewable energy. Our goal is to provide accurate, up-to-date information and practical advice to help you make informed decisions and take effective actions.
+                </p>
+                <p>
+                    We are committed to transparency, collaboration, and continuous learning. We work with experts, organizations, and communities to bring you the best insights and solutions for environmental sustainability. Whether you're looking to reduce your carbon footprint, learn about eco-friendly practices, or get involved in conservation efforts, we are here to support you every step of the way.
+                </p>
+                <p>
+                    Thank you for joining us on this journey towards a greener future. Together, we can make a difference and create a healthier, more sustainable planet for generations to come.
+                </p>
+            </div>
+        </section>
+        <section id="key-issues">
+            <h2>Key Environmental Issues</h2>
+            <hr id="line2">
+            <div class="issues-content">
+                <p>
+                    Our planet is facing a variety of environmental challenges that require immediate attention and action. At EnvironmentSave.IO, we highlight the most pressing issues to help our community understand the impact of these problems and take steps to mitigate them. Below are some of the key environmental issues we focus on:
+                </p>
+                <div class="issue">
+                    <h3>1. Climate Change</h3>
+                    <p>
+                        Climate change refers to significant changes in global temperatures and weather patterns over time. While climate change is a natural phenomenon, recent decades have seen a rapid increase in these changes due to human activities, primarily the burning of fossil fuels, which increases greenhouse gas emissions. This leads to global warming, rising sea levels, and extreme weather events, impacting ecosystems, wildlife, and human societies.
+                    </p>
+                </div>
+                <div class="issue">
+                    <h3>2. Deforestation</h3>
+                    <p>
+                        Deforestation involves the large-scale removal of forests, which are vital for biodiversity, climate regulation, and the livelihoods of millions of people. Causes of deforestation include logging, agriculture, and urban expansion. This loss of forests contributes to the release of stored carbon dioxide, exacerbating climate change, and leads to the loss of habitats for countless species.
+                    </p>
+                </div>
+                <div class="issue">
+                    <h3>3. Pollution</h3>
+                    <p>
+                        Pollution affects the air, water, and soil, posing serious threats to human health, wildlife, and natural ecosystems. Major sources include industrial emissions, vehicle exhaust, chemical spills, and improper waste disposal. Pollutants can cause respiratory diseases, contaminate water supplies, and lead to the destruction of ecosystems.
+                    </p>
+                </div>
+                <div class="issue">
+                    <h3>4. Wildlife Conservation</h3>
+                    <p>
+                        Many animal species are currently at risk of extinction due to factors such as habitat destruction, poaching, and climate change. Wildlife conservation efforts focus on protecting endangered species, preserving habitats, and addressing the root causes of biodiversity loss. These efforts are crucial for maintaining the balance of ecosystems and the overall health of our planet.
+                    </p>
+                </div>
+                <div class="issue">
+                    <h3>5. Renewable Energy</h3>
+                    <p>
+                        Transitioning to renewable energy sources, such as solar, wind, and hydroelectric power, is essential for reducing our dependence on fossil fuels, which are a major contributor to greenhouse gas emissions and climate change. Renewable energy provides a sustainable and cleaner alternative, helping to protect the environment and create a more resilient energy system.
+                    </p>
+                </div>
+                <p>
+                    Understanding these key issues is the first step toward creating a sustainable future. At EnvironmentSave.IO, we are committed to providing the knowledge and resources you need to take action. Whether it's reducing your carbon footprint, supporting conservation efforts, or advocating for policy changes, every action counts.
+                </p>
+            </div>
+        </section>
+        <section id="sustainable-living">
+            <h2>Tips for Sustainable Living</h2>
+            <hr id="line2">
+            <div class="sustainable-content">
+                <p>
+                    Living sustainably means making choices that help protect our environment, conserve natural resources, and support long-term ecological balance. It's about integrating environmentally friendly practices into our daily lives to reduce our carbon footprint and contribute positively to the planet. Here are some practical tips to help you live more sustainably:
+                </p>
+                <div class="tip">
+                    <h3>1. Reduce, Reuse, Recycle</h3>
+                    <p>
+                        These three principles form the foundation of sustainable living. Reduce your consumption of single-use plastics, reuse items whenever possible, and recycle materials like paper, glass, and metal. Proper waste management helps conserve resources and reduces landfill waste.
+                    </p>
+                </div>
+                <div class="tip">
+                    <h3>2. Save Energy</h3>
+                    <p>
+                        Reducing energy consumption not only lowers your utility bills but also decreases greenhouse gas emissions. Simple actions like turning off lights when not in use, unplugging electronics, and using energy-efficient appliances can make a significant difference. Consider switching to renewable energy sources, such as solar or wind power, if available.
+                    </p>
+                </div>
+                <div class="tip">
+                    <h3>3. Conserve Water</h3>
+                    <p>
+                        Water is a precious resource that should be used wisely. Fix leaks, install water-saving fixtures, and opt for drought-resistant plants in your garden. Small changes like taking shorter showers, turning off the tap while brushing your teeth, and using a broom instead of a hose to clean driveways can contribute to significant water savings.
+                    </p>
+                </div>
+                <div class="tip">
+                    <h3>4. Choose Sustainable Transportation</h3>
+                    <p>
+                        Reducing reliance on fossil-fuel-powered vehicles helps lower carbon emissions. Consider walking, biking, carpooling, or using public transportation for your daily commute. If possible, choose electric or hybrid vehicles. These alternatives not only reduce environmental impact but also promote healthier lifestyles.
+                    </p>
+                </div>
+                <div class="tip">
+                    <h3>5. Support Local and Sustainable Products</h3>
+                    <p>
+                        Buying locally produced and sustainably sourced products reduces your carbon footprint and supports local economies. Choose organic and fair-trade items when possible, and avoid products with excessive packaging. Being mindful of your consumption choices can lead to more sustainable living.
+                    </p>
+                </div>
+                <div class="tip">
+                    <h3>6. Reduce Meat Consumption</h3>
+                    <p>
+                        The production of meat, particularly beef, has a significant environmental impact, including high greenhouse gas emissions and land use. Reducing your meat consumption, even just a few times a week, can lower your environmental footprint. Try incorporating more plant-based meals into your diet.
+                    </p>
+                </div>
+                <p>
+                    Adopting sustainable living practices can be a gradual process. Start with small changes and build upon them over time. Every action, no matter how small, contributes to a healthier and more sustainable world. Together, we can make a positive impact and preserve the planet for future generations.
+                </p>
+            </div>
+        </section>
+        
+        <section id="projects-initiatives">
+            <h2>Projects and Initiatives</h2>
+            <hr id="line2">
+            <div class="projects-content">
+                <p>
+                    At EnvironmentSave.IO, we are actively involved in a variety of projects and initiatives aimed at addressing environmental challenges and promoting sustainability. Our efforts focus on conservation, education, and community engagement, with the goal of creating a positive impact on the planet. Below are some of the key projects and initiatives we are currently working on:
+                </p>
+                <div class="project">
+                    <h3>1. Reforestation Program</h3>
+                    <p>
+                        Our reforestation program focuses on planting native trees in deforested and degraded areas. By restoring forests, we aim to enhance biodiversity, sequester carbon, and improve soil and water quality. This initiative also provides local communities with opportunities for sustainable livelihoods.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>2. Clean Water Initiative</h3>
+                    <p>
+                        Access to clean water is essential for health and well-being. Our Clean Water Initiative works to improve water quality and availability in underserved regions. We partner with local organizations to install water purification systems, promote water conservation practices, and educate communities about safe water use.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>3. Wildlife Conservation Efforts</h3>
+                    <p>
+                        We are committed to protecting endangered species and preserving critical habitats. Our wildlife conservation efforts include anti-poaching campaigns, habitat restoration projects, and public awareness programs. We collaborate with conservation experts and local communities to develop and implement strategies that protect wildlife and promote biodiversity.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>4. Sustainable Agriculture Initiative</h3>
+                    <p>
+                        Sustainable agriculture is vital for food security and environmental health. Our initiative promotes eco-friendly farming practices, such as organic farming, agroforestry, and integrated pest management. We provide training and resources to farmers to help them adopt sustainable methods that increase yields, reduce environmental impact, and support resilient food systems.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>5. Education and Outreach Programs</h3>
+                    <p>
+                        Education is key to driving change. Our education and outreach programs aim to raise awareness about environmental issues and inspire action. We conduct workshops, seminars, and community events, and provide educational materials on topics such as climate change, waste reduction, and energy conservation. Our goal is to empower individuals and communities to make informed decisions and take proactive steps towards sustainability.
+                    </p>
+                </div>
+                <p>
+                    We invite you to join us in these efforts. Whether through volunteering, donations, or spreading the word, your support is crucial in helping us achieve our mission. Together, we can make a difference and build a more sustainable and equitable world for future generations.
+                </p>
+            </div>
+        </section>
+        <section id="call-to-action">
+            <h2>Get Involved: Take Action for the Environment</h2>
+            <hr id="line2">
+            <div class="cta-content">
+                <p>
+                    At EnvironmentSave.IO, we believe that every individual has the power to make a difference. Our planet is facing unprecedented environmental challenges, but together, we can create a sustainable future. Here are some ways you can get involved and take action:
+                </p>
+                <div class="cta">
+                    <h3>1. Volunteer Your Time</h3>
+                    <p>
+                        Join our volunteer programs and contribute your skills and passion to our various projects and initiatives. Whether it's participating in tree planting events, assisting with wildlife conservation efforts, or helping out at educational workshops, your time and effort can have a significant impact.
+                    </p>
+                </div>
+                <div class="cta">
+                    <h3>2. Donate to Support Our Work</h3>
+                    <p>
+                        Your donations help fund our projects, educational programs, and conservation efforts. Contributions, whether large or small, enable us to expand our reach and make a greater impact. Consider making a one-time donation or becoming a monthly supporter.
+                    </p>
+                </div>
+                <div class="cta">
+                    <h3>3. Advocate for Change</h3>
+                    <p>
+                        Use your voice to advocate for environmental policies and practices that promote sustainability. Contact your local representatives, join environmental advocacy groups, and participate in community discussions. Your advocacy can influence positive change at local, national, and global levels.
+                    </p>
+                </div>
+                <div class="cta">
+                    <h3>4. Educate and Inspire Others</h3>
+                    <p>
+                        Share your knowledge about environmental issues with friends, family, and colleagues. Encourage others to adopt sustainable practices in their daily lives. By raising awareness and inspiring action, we can collectively work towards a more sustainable world.
+                    </p>
+                </div>
+                <div class="cta">
+                    <h3>5. Make Sustainable Choices</h3>
+                    <p>
+                        Every action counts. Commit to making more sustainable choices in your daily life, such as reducing waste, conserving energy, and choosing eco-friendly products. Small changes can lead to significant environmental benefits when adopted collectively.
+                    </p>
+                </div>
+                <p>
+                    Together, we can protect our planet and ensure a healthy, sustainable future for all. Join us in taking action today. Your involvement makes a difference.
+                </p>
+                <div class="cta-buttons">
+                    <button onclick="window.location.href='volunteer.html'">Volunteer</button>
+                    <button onclick="window.location.href='donate.html'">Donate</button>
+                    <button onclick="window.location.href='advocacy.html'">Advocate</button>
+                </div>
+            </div>
+        </section>
+        <section id="resources-links">
+            <h2>Resources and Links</h2>
+            <hr id="line2">
+            <div class="resources-content">
+                <p>
+                    Welcome to our Resources and Links section, where we provide a curated collection of valuable information and tools to help you deepen your understanding of environmental issues and take meaningful action. Whether you're looking for educational materials, practical guides, or ways to get involved, you'll find a wealth of resources here.
+                </p>
+                <div class="resource-category">
+                    <h3>1. Educational Resources</h3>
+                    <p>
+                        Expand your knowledge with articles, reports, and publications on a wide range of environmental topics, including climate change, biodiversity, renewable energy, and sustainable living. These resources are perfect for students, educators, and anyone interested in learning more about the environment.
+                    </p>
+                    <ul>
+                        <li><a href="https://www.unep.org/resources">UNEP Publications</a></li>
+                        <li><a href="https://www.ipcc.ch/reports/">IPCC Reports</a></li>
+                        <li><a href="https://www.nationalgeographic.com/environment/">National Geographic Environment</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3>2. Practical Guides and Toolkits</h3>
+                    <p>
+                        Find practical guides and toolkits designed to help you take action in your daily life. From reducing your carbon footprint to starting a recycling program in your community, these resources provide step-by-step instructions and tips for sustainable living.
+                    </p>
+                    <ul>
+                        <li><a href="https://www.epa.gov/environmental-topics/greener-living">EPA Greener Living Guide</a></li>
+                        <li><a href="https://www.worldwildlife.org/pages/green-tips">WWF Green Tips</a></li>
+                        <li><a href="https://www.earthday.org/earth-day-tips/">Earth Day Action Toolkit</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3>3. Environmental Organizations and Networks</h3>
+                    <p>
+                        Connect with organizations and networks dedicated to environmental conservation and sustainability. These groups offer opportunities for volunteering, advocacy, and collaboration. Get involved and become part of a global community working towards a greener future.
+                    </p>
+                    <ul>
+                        <li><a href="https://www.greenpeace.org/international/">Greenpeace International</a></li>
+                        <li><a href="https://www.worldwildlife.org/">World Wildlife Fund (WWF)</a></li>
+                        <li><a href="https://www.sierraclub.org/">Sierra Club</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3>4. Government and Policy Resources</h3>
+                    <p>
+                        Stay informed about environmental policies and regulations with resources from government agencies and policy institutions. Understand the laws and policies affecting the environment, and learn how you can participate in the policymaking process.
+                    </p>
+                    <ul>
+                        <li><a href="https://www.epa.gov/">U.S. Environmental Protection Agency (EPA)</a></li>
+                        <li><a href="https://ec.europa.eu/environment/">European Environment Agency (EEA)</a></li>
+                        <li><a href="https://www.environment.gov.au/">Australian Government Department of Agriculture, Water and the Environment</a></li>
+                    </ul>
+                </div>
+                <p>
+                    Explore these resources and empower yourself with the knowledge and tools needed to make a difference. Together, we can create a more sustainable and equitable world.
+                </p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About EnvironmentSave.IO</h3>
+                <p>
+                    EnvironmentSave.IO is dedicated to raising awareness and promoting action towards environmental sustainability. Our mission is to educate, inspire, and empower individuals and communities to protect our planet. We provide resources, guides, and opportunities for people to make a positive impact on the environment.
+                </p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#resources-links">Resources</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: contact@environmentsave.io</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: B-Block New Delhi</p>
+                <div class="socials">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter to stay updated on our latest projects, resources, and events.</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EnvironmentSave.IO. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
